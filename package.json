@@ -1,0 +1,45 @@
+{
+  "name": "dotcom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start:dev": "nodemon server",
+    "start": "node server",
+    "build": "webpack",
+    "build:dev": "webpack-cli --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlitoswillis/dotcom.git"
+  },
+  "author": "Carlitos Willis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlitoswillis/dotcom/issues"
+  },
+  "homepage": "https://github.com/carlitoswillis/dotcom#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^26.0.1",
+    "jquery": "^3.5.1",
+    "nodemon": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "webpack": "^4.43.0"
+  }
+}
