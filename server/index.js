@@ -1,6 +1,7 @@
 const express = require('express');
 const os = require('os');
 const compression = require('compression');
+const path = require('path');
 const bunyan = require('bunyan');
 
 const app = express();
@@ -9,9 +10,13 @@ const port = process.env.PORT || 3000;
 
 app.use(compression());
 app.use(express.json());
-// app.use(express.static('public'));
+app.use(express.static(path.resolve(__dirname, '..', 'public')));
 
-app.use('/', express.static('public'));
+app.use('*', express.static(path.resolve(__dirname, '..', 'public')));
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve('public', 'index.html'));
+// });
 
 app.listen(port, (err) => {
   if (err) {
