@@ -1,7 +1,19 @@
 .intro {
+  position: fixed;
+  width: 100%;
   text-align: center;
   background-color:rgb(69, 165, 182);
   margin-bottom: 25px;
+  animation-name: intro;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  z-index: 1;
+}
+
+@keyframes intro {
+  0%   {top:-100px;}
+  /* 50%  {left:200px;} */
+  100% {top:0px;}
 }
 
 img {
@@ -28,6 +40,21 @@ img {
   justify-content: center;
   padding: 5px;
   margin: auto;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  animation-name: home;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes home {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .fields {
@@ -96,3 +123,51 @@ a {
   color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.shortAbout {
+}
+
+.profile {
+  width: 35%;
+  max-width: 200px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profpic {
+  max-width: 100%;
+  border-radius: 100px;
+}
+
+.hamburger {
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top: 50%;
+  transform: translate(-5%, -50%);
+}
+.line {
+  width: 30px;
+  height: 3px;
+  background: black;
+  margin: 5px;
+  z-index: 2;
+  visibility: hidden;
+}
+
+/* .hamburger:hover {
+  transform: rotate(90deg);
+} */
+
+@media screen and (max-width: 768px) {
+
+  .line {
+    visibility: visible;
+  }
+
+  .intro {
+    visibility: hidden
+  }
+}
+
