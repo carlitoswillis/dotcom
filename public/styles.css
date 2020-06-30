@@ -1,5 +1,6 @@
 .intro {
   position: fixed;
+  display: grid;
   width: 100%;
   text-align: center;
   background-color:rgb(69, 165, 182);
@@ -8,6 +9,27 @@
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   z-index: 1;
+}
+
+.introToo {
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color:rgb(69, 165, 182);
+  animation-name: intro;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  z-index: 0;
+}
+
+.titleTwo {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 18pt;
+  margin: 0 auto
 }
 
 @keyframes intro {
@@ -26,7 +48,9 @@ img {
   font-family: Helvetica, sans-serif;
 }
 
+
 .menuSplit {
+  margin-left: 20px;
   display: grid;
   grid-template-columns: 5fr 10fr;
   font-size: 2em;
@@ -91,12 +115,11 @@ img {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-nav {
+.navDiv {
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  /* background: rgb(40, 126, 103); */
   color: black;
   font-size: 16pt;
 }
@@ -107,6 +130,17 @@ nav {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+}
+
+.classy {
+  display: inline-block;
+  height: 100%;
+  color:rgb(69, 165, 182);
+}
+
+.classy li {
+  height: 100%;
+  color:rgb(69, 165, 182);
 }
 
 a {
@@ -144,7 +178,7 @@ a {
   position: absolute;
   cursor: pointer;
   right: 5%;
-  top: 50%;
+  top: 65%;
   transform: translate(-5%, -50%);
 }
 .line {
@@ -152,7 +186,7 @@ a {
   height: 3px;
   background: black;
   margin: 5px;
-  z-index: 2;
+  z-index: 3;
   visibility: hidden;
 }
 
@@ -171,3 +205,12 @@ a {
   }
 }
 
+.fullScreenNav {
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  color: aliceblue;
+  background-color: aliceblue;
+  z-index: 5;
+  overflow: hidden;
+}
