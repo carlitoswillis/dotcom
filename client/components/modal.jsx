@@ -15,12 +15,24 @@ class Modal extends React.Component {
     const { field, info, img } = this.props;
     return (
       <div onClick={() => this.setState({ open: !open })}>
-        <div className="field">
-          <img className="modalimg" src={`images/${img}`} alt="thing i do" />
-          <h2 className="labelforfield">
-            {field}
-          </h2>
-        </div>
+        {open
+          ? (
+            <div className="field">
+              <img className="modalimg" src={`images/${img}`} alt="thing i do" />
+              <div className="modalInfoDiv">
+                <p className="modalInfo">{info}</p>
+              </div>
+            </div>
+          )
+          : (
+            <div className="field">
+              <img className="modalimg" src={`images/${img}`} alt="thing i do" />
+              <h2 className="labelforfield">
+                {field}
+              </h2>
+            </div>
+          )}
+
       </div>
     );
   }

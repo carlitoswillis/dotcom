@@ -83,9 +83,9 @@ class App extends React.Component {
                   Aldus PageMaker including versions of Lorem Ipsum.
                 </div> */}
                 <div className="fields">
-                  <Modal img="se.jpeg" field="Software Engineer" />
-                  <Modal img="smma.jpeg" field="Digital Marketer" />
-                  <Modal img="push.jpg" field="Music Producer" />
+                  <Modal img="se.jpeg" field="Software Engineer" info="I am a great software engineer as you can see by this site" />
+                  <Modal img="smma.jpeg" field="Digital Marketer" info="I run very dope ads" />
+                  <Modal img="push.jpg" field="Music Producer" info="I make very nice musics" />
                 </div>
               </div>
             </Route>
