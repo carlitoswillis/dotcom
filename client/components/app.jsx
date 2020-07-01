@@ -6,6 +6,7 @@ import Shop from './shop';
 import About from './about';
 import Blog from './blog';
 import Portfolio from './portfolio';
+import Modal from './modal';
 
 class App extends React.Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class App extends React.Component {
             </div>
           )
           : <div />}
-        <div>
+        <div className="homeDiv">
           <div className="introToo">
             <h1 className="titleTwo">
               carlitos willis | software engineer
@@ -68,7 +69,7 @@ class App extends React.Component {
                 <div className="profile">
                   <img className="profpic" src="images/profile.jpg" alt="me" />
                 </div>
-                <div className="shortAbout">
+                {/* <div className="shortAbout">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                   Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
                   when an unknown printer took a galley of type
@@ -80,41 +81,11 @@ class App extends React.Component {
                   and more recently
                   with desktop publishing software like
                   Aldus PageMaker including versions of Lorem Ipsum.
-                </div>
+                </div> */}
                 <div className="fields">
-                  <div className="field">
-                    <img src="images/se.jpeg" alt="thing i do" />
-                    <div className="pair">
-                      <h2>
-                        Thing I do
-                      </h2>
-                      <p>
-                        background info i suppose
-                      </p>
-                    </div>
-                  </div>
-                  <div className="field">
-                    <img src="images/smma.png" alt="thing i do" />
-                    <div className="pair">
-                      <h2>
-                        Thing I do 2
-                      </h2>
-                      <p>
-                        background info i suppose 2
-                      </p>
-                    </div>
-                  </div>
-                  <div className="field">
-                    <img src="images/push.jpg" alt="thing i do" />
-                    <div className="pair">
-                      <h2>
-                        Thing I do 3
-                      </h2>
-                      <p>
-                        background info i suppose 3
-                      </p>
-                    </div>
-                  </div>
+                  <Modal img="se.jpeg" field="Software Engineer" />
+                  <Modal img="smma.jpeg" field="Digital Marketer" />
+                  <Modal img="push.jpg" field="Music Producer" />
                 </div>
               </div>
             </Route>
