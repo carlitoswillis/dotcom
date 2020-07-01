@@ -22,8 +22,8 @@ class App extends React.Component {
         {show
           ? (
             <div onClick={() => this.setState({ show: false })} className="fullScreenNav">
-              <div className="menuSplit">
-                <h1 className="title">
+              <div className="fullNavMenu">
+                <h1 className="titleThree">
                   carlitos willis | software engineer
                 </h1>
                 <Nav classy="classy" />
@@ -40,7 +40,6 @@ class App extends React.Component {
           <div className="intro">
             <div
               onClick={() => {
-                console.log('hey');
                 this.setState({
                   show: !show,
                 });
