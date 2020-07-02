@@ -17,14 +17,14 @@ const Nav = (props) => (
             About
           </li>
         </Link>
+        <Link to="/resume">
+          <li>
+            Resume
+          </li>
+        </Link>
         <Link to="/blog">
           <li>
             Blog
-          </li>
-        </Link>
-        <Link to="/shop">
-          <li>
-            Shop
           </li>
         </Link>
         <Link to="/portfolio">

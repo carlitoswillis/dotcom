@@ -1,3 +1,7 @@
+body {
+  background-color: aliceblue;
+}
+
 .intro {
   position: fixed;
   display: grid;
@@ -69,9 +73,8 @@ img {
   visibility: hidden;
   animation-fill-mode: forwards;
   animation-name: home;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-timing-function: ease-in-out;
-  width: 600px;
 }
 
 @keyframes home {
@@ -85,12 +88,11 @@ img {
 }
 
 .fields {
+  display: grid;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  display: grid;
   text-align: center;
-  width: 100%;
   /* grid-template-columns: 4fr 4fr 4fr; */
 }
 
@@ -101,7 +103,7 @@ img {
 
 .modalimg:hover {
   filter: blur(0px);
-  opacity: 1;
+  opacity: .7;
 }
 
 .field:hover {
@@ -109,6 +111,7 @@ img {
 }
 
 .field {
+  cursor: pointer;
   display: grid;
   position: relative;
   background-color:rgb(69, 165, 182);
@@ -249,6 +252,11 @@ a {
 
 @media screen and (max-width: 1100px) {
 
+  .field {
+    /* max-width: 300px; */
+    /* margin-left: auto; */
+  }
+
   .navDiv {
     display: grid;
   }
@@ -282,7 +290,11 @@ a {
   color: aliceblue;
   background-color: aliceblue;
   z-index: 5;
-  overflow: hidden;
+  overflow: hidden;visibility: hidden;
+  animation-fill-mode: forwards;
+  animation-name: home;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 
 .titleThree {
@@ -301,4 +313,10 @@ a {
 
 .fullNavMenu {
   display: grid;
+}
+
+.resume {
+  margin-top: 71px;
+  width: 100%;
+  height: 90vh;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Nav from './nav';
-import Shop from './shop';
+import Resume from './resume';
 import About from './about';
 import Blog from './blog';
 import Portfolio from './portfolio';
@@ -61,8 +61,8 @@ class App extends React.Component {
           <Switch>
 
             <Route path="/about" component={About} />
+            <Route path="/resume" component={Resume} />
             <Route path="/blog" component={Blog} />
-            <Route path="/shop" component={Shop} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/">
               <div className="home">
