@@ -115,7 +115,7 @@ img {
   display: grid;
   position: relative;
   background-color:rgb(69, 165, 182);
-  border-radius: 10px;
+  border-radius: 3px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: auto;
@@ -123,6 +123,7 @@ img {
   padding: 20px;
   width: 75%;
   max-width: 500px;
+  box-shadow: 1px 1px 3px 3px rgb(128, 128, 128);
 }
 
 .labelforfield {
@@ -228,6 +229,7 @@ a {
 .profpic {
   max-width: 100%;
   border-radius: 100px;
+  box-shadow: 2px 2px 3px  rgb(128, 128, 128);
 }
 
 .hamburger {
@@ -237,13 +239,18 @@ a {
   top: 85%;
   transform: translate(-5%, -50%);
 }
+
 .line {
   width: 30px;
   height: 3px;
   background: black;
-  margin: 5px;
+  margin: 0px;
   z-index: 0;
   visibility: hidden;
+}
+.linetoo {
+  background: none;
+  height: 6px;
 }
 
 /* .hamburger:hover {
@@ -313,6 +320,8 @@ a {
 
 .fullNavMenu {
   display: grid;
+  margin-top: 50px;
+  /* margin-bottom: auto; */
 }
 
 .resume {

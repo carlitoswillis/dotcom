@@ -15,6 +15,7 @@ app.use(express.static('public'));
 
 app.route('/blogs')
   .post((req, res) => {
+    res.end('you are not authorized');
   })
   .get((req, res) => {
     db.readAllBlogs((err, results) => {
@@ -23,8 +24,10 @@ app.route('/blogs')
     });
   })
   .put((req, res) => {
+    res.end('you are not authorized');
   })
   .delete((req, res) => {
+    res.end('you are not authorized');
   });
 
 app.get('*', (req, res) => {

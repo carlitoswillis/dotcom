@@ -48,7 +48,9 @@ class App extends React.Component {
               className="hamburger"
             >
               <div className="line" />
+              <div className="line linetoo" />
               <div className="line" />
+              <div className="line linetoo" />
               <div className="line" />
             </div>
             <div className="menuSplit">
