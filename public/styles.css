@@ -14,6 +14,7 @@ body {
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   z-index: 1;
+  /* box-shadow: 2px 2px 10px rgb(128, 128, 128); */
 }
 
 .introToo {
@@ -27,6 +28,7 @@ body {
   animation-timing-function: ease-in-out;
   z-index: 1;
   visibility: hidden;
+  /* box-shadow: 1px 0px 3px rgb(128, 128, 128); */
 }
 
 .titleTwo {
@@ -123,7 +125,7 @@ img {
   padding: 20px;
   width: 75%;
   max-width: 500px;
-  box-shadow: 1px 1px 3px 3px rgb(128, 128, 128);
+  box-shadow: 1px 2px 10px rgb(128, 128, 128);
 }
 
 .labelforfield {
@@ -229,7 +231,7 @@ a {
 .profpic {
   max-width: 100%;
   border-radius: 100px;
-  box-shadow: 2px 2px 3px  rgb(128, 128, 128);
+  box-shadow: 2px 2px 10px rgb(128, 128, 128);
 }
 
 .hamburger {
@@ -328,4 +330,64 @@ a {
   margin-top: 71px;
   width: 100%;
   height: 90vh;
+}
+
+
+.blog {
+  background-color: aliceblue;
+  padding-top: 15%;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.blogTitle {
+  font-size: 18pt;
+  text-align: center;
+}
+
+.blogContent {
+  font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.blogAuthor {
+  font-size: 14pt;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.pagination a {
+  color: black;
+  /* background-color: rgba(53, 158, 176, 0.194);; */
+  text-align: center;
+  /* border-radius: 3px; */
+  /* box-shadow: 2px 2px 3px  rgb(128, 128, 128); */
+  font-size: 12pt;
+}
+
+.pagination a:hover {
+  color: grey;
+  cursor: pointer;
+}
+
+.query {
+  display: grid;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  width: 100%;
+  text-align: center;
 }
