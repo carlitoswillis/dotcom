@@ -14,8 +14,9 @@ const readAllBlogs = (query, callback) => {
   let qstr = 'select * from blogs';
   let qforcount = qstr;
   if (q) {
-    qstr = qstr.concat(` where content like '%${q}%'`);
-    qforcount = qforcount.concat(` where content like '%${q}%'`);
+    const addStr = ` where content like '%${q}%' or title like '%${q}%' or username like '%${q}%'`;
+    qstr = qstr.concat(addStr);
+    qforcount = qforcount.concat(addStr);
   }
   qstr = qstr.concat(` order by id desc limit ${offset}, ${limit}`);
   con.query(qstr, (err, result) => {
