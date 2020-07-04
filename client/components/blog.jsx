@@ -10,7 +10,7 @@ class Blog extends React.Component {
       url: 'http://127.0.0.1:3000/blogs',
       blogs: [],
       page: 0,
-      perPage: 5,
+      perPage: 3,
     };
   }
 
@@ -19,6 +19,7 @@ class Blog extends React.Component {
   }
 
   loadDateFromServer() {
+    window.scrollTo(0, 0);
     const {
       url, page, query, perPage,
     } = this.state;

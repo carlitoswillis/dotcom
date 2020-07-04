@@ -2,7 +2,6 @@ const con = require('./myConfig');
 
 const getBlogCount = (query, callback) => {
   const qstr = query.replace('*', 'count(*)');
-  console.log(qstr);
   con.query(qstr, (err, result) => {
     if (err) throw err;
     callback(null, result);
