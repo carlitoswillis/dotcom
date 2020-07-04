@@ -18,7 +18,7 @@ app.route('/blogs')
     res.end('you are not authorized');
   })
   .get((req, res) => {
-    db.readAllBlogs((err, results) => {
+    db.readAllBlogs(req.query, (err, results) => {
       if (err) throw err;
       res.send(results);
     });

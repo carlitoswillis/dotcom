@@ -366,6 +366,7 @@ a {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  margin-bottom: 20px;
 }
 
 .pagination a {
