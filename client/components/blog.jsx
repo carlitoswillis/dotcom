@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactPaginate from 'react-paginate';
 
+const $ = require('jquery');
+
 class Blog extends React.Component {
   constructor(props) {
     super(props);
-    const { url, perPage } = this.props;
     this.state = {
-      url,
+      url: 'http://127.0.0.1:3000/blogs',
       blogs: [],
       page: 0,
-      perPage,
+      perPage: 5,
     };
   }
 
@@ -21,20 +22,21 @@ class Blog extends React.Component {
     const {
       url, page, query, perPage,
     } = this.state;
+
     $.ajax({
-      url: `${url}?_page=${page + 1}&_limit=${perPage}`.concat(`${query ? `&q=${query}` : ''}`),
+      url: `${url}?page=${page + 1}&limit=${perPage}`.concat(`${query ? `&q=${query}` : ''}`),
       type: 'GET',
       success: (data, textStatus, request) => {
         this.setState({
-          data,
-          pageCount: Math.ceil(request.getResponseHeader('X-Total-Count') / perPage),
+          blogs: [...data.results],
+          pageCount: data.count / perPage,
         }, () => {
           document.getElementById('query').value = '';
           this.setState({ query: undefined });
         });
       },
       error: (xhr, status, err) => {
-        console.error(this.props.url, status, err.toString()); // eslint-disable-line
+        console.error(this.props.url, status, err.toString());
       },
     });
   }
@@ -60,52 +62,37 @@ class Blog extends React.Component {
     }
   }
 
-  componentDidMount() {
-    const fetchBlogs = (callback) => {
-      const requestOptions = {
-        method: 'GET',
-        redirect: 'follow',
-      };
-      fetch('http://127.0.0.1:3000/blogs', requestOptions)
-        .then((response) => response.json())
-        .then((res) => {
-          callback({ blogs: [...res] });
-        })
-        .catch((error) => console.log('error', error));
-    };
-
-    fetchBlogs(this.setState.bind(this));
-  }
-
   render() {
-    const { blogs } = this.state;
+    const { blogs, pageCount } = this.state;
     return (
-      <div className="blog">
-        <input className="query" id="query" onKeyPress={this.handleKeyPress.bind(this)} placeholder="search for something" />
-        <ul className="bloggy">
-          {blogs.map((x) => (
-            <li key={x.id}>
-              <h2 className="blogTitle">
-                {x.title}
-              </h2>
-              <p className="blogContent">
-                {x.content}
-              </p>
-              <h3 className="blogAuthor">
-                {x.username}
-              </h3>
-            </li>
-          ))}
-        </ul>
+      <div>
+        <div className="blog">
+          <input className="query" id="query" onKeyPress={this.handleKeyPress.bind(this)} placeholder="search for something" />
+          <ul className="bloggy">
+            {blogs.map((x) => (
+              <li key={x.id}>
+                <h2 className="blogTitle">
+                  {x.title}
+                </h2>
+                <p className="blogContent">
+                  {x.content}
+                </p>
+                <h3 className="blogAuthor">
+                  {x.username}
+                </h3>
+              </li>
+            ))}
+          </ul>
+        </div>
         <ReactPaginate
           previousLabel="previous"
           nextLabel="next"
           breakLabel="..."
           breakClassName="break-me"
-          // pageCount={pageCount}
+          pageCount={pageCount}
           marginPagesDisplayed={2}
           pageRangeDisplayed={5}
-          // onPageChange={this.handlePageClick.bind(this)}
+          onPageChange={this.handlePageClick.bind(this)}
           containerClassName="pagination"
           subContainerClassName="pagespagination"
           activeClassName="active"
