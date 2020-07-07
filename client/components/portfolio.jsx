@@ -1,4 +1,5 @@
 import React from 'react';
+import PModal from './pmodal';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -8,8 +9,10 @@ class Portfolio extends React.Component {
 
   render() {
     return (
-      <div>
-        {new Array(10).fill(0).map(x => (<div>empty</div>))}
+      <div className="pfolio">
+        <PModal title="silentSHOUT" info="A private chat app for secure communication. Includes automatic chat clearing and a long term pinning option for important and less private messages." img="ss.png" lnk="https://github.com/carlitoswillis/silentShout" />
+        <PModal title="silentSHOUT" info="A private chat app for secure communication. Includes automatic chat clearing and a long term pinning option for important and less private messages." img="ss.png" lnk="https://github.com/carlitoswillis/silentShout" />
+        <PModal title="silentSHOUT" info="A private chat app for secure communication. Includes automatic chat clearing and a long term pinning option for important and less private messages." img="ss.png" lnk="https://github.com/carlitoswillis/silentShout" />
       </div>
     );
   }
