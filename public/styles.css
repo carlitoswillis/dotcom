@@ -13,8 +13,8 @@ body {
   animation-name: intro;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
-  z-index: 1;
-  /* box-shadow: 2px 2px 10px rgb(128, 128, 128); */
+  z-index: 2;
+  box-shadow: 1px 0px 3px rgb(168, 166, 166);
 }
 
 .introToo {
@@ -26,9 +26,9 @@ body {
   animation-name: intro;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
-  z-index: 1;
+  z-index: 2;
   visibility: hidden;
-  /* box-shadow: 1px 0px 3px rgb(128, 128, 128); */
+  box-shadow: 1px 0px 3px rgb(168, 166, 166);
 }
 
 .titleTwo {
@@ -37,7 +37,7 @@ body {
   text-align: center;
   font-family: Helvetica, sans-serif;
   font-size: 18pt;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 @keyframes intro {
@@ -54,6 +54,7 @@ img {
 .title {
   color: white;
   font-family: Helvetica, sans-serif;
+  z-index: 4;
 }
 
 
@@ -134,7 +135,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 1;
   background-color: rgba(255, 255, 255, 0.769);
   padding: 5%;
 }
@@ -150,7 +151,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 1;
   background-color: rgba(255, 255, 255, 0.769);
   padding: 5%;
 }
