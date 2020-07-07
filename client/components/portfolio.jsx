@@ -10,9 +10,9 @@ class Portfolio extends React.Component {
   render() {
     return (
       <div className="pfolio">
-        <PModal title="silentSHOUT" info="A private chat app for secure communication. Includes automatic chat clearing and a long term pinning option for important and less private messages." img="ss.png" lnk="https://github.com/carlitoswillis/silentShout" />
-        <PModal title="silentSHOUT" info="A private chat app for secure communication. Includes automatic chat clearing and a long term pinning option for important and less private messages." img="ss.png" lnk="https://github.com/carlitoswillis/silentShout" />
-        <PModal title="silentSHOUT" info="A private chat app for secure communication. Includes automatic chat clearing and a long term pinning option for important and less private messages." img="ss.png" lnk="https://github.com/carlitoswillis/silentShout" />
+        <PModal title="silentSHOUT" info="A private chat app for secure communication. Includes automatic chat clearing and a long term pinning option for important and less private messages." img="ss.png" lnk1="https://github.com/carlitoswillis/silentShout" />
+        <PModal title="silentSHOUT" info="A private chat app for secure communication. Includes automatic chat clearing and a long term pinning option for important and less private messages." img="ss.png" lnk1="https://github.com/carlitoswillis/silentShout" />
+        <PModal title="silentSHOUT" info="A private chat app for secure communication. Includes automatic chat clearing and a long term pinning option for important and less private messages." img="ss.png" lnk1="https://github.com/carlitoswillis/silentShout" />
       </div>
     );
   }

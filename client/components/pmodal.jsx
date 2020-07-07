@@ -13,22 +13,30 @@ class PModal extends React.Component {
   render() {
     const { open } = this.state;
     const {
-      title, info, img, lnk,
+      title, info, img, lnk1,
     } = this.props;
     return (
-      <div onClick={() => this.setState({ open: !open })}>
+      <div>
         <div>
           {open
             ? (
-              <div className="field">
+              <div className="field" onMouseEnter={() => this.setState({ open: !open })} onMouseLeave={() => this.setState({ open: !open })}>
                 <img className="modalimg" src={`images/${img}`} alt="thing i do" />
                 <div className="modalInfoDiv">
                   <p className="modalInfo">{info}</p>
+                  <div className="folioButtons">
+                    <a href={lnk1} target="_blank" rel="noreferrer">
+                      <div className="folioButton">github</div>
+                    </a>
+                    <a href={lnk1} target="_blank" rel="noreferrer">
+                      <div className="folioButton">live demo</div>
+                    </a>
+                  </div>
                 </div>
               </div>
             )
             : (
-              <div className="field">
+              <div className="field" onMouseEnter={() => this.setState({ open: !open })} onMouseLeave={() => this.setState({ open: !open })}>
                 <img className="modalimg" src={`images/${img}`} alt="thing i do" />
                 <h2 className="labelforfield">
                   {title}
