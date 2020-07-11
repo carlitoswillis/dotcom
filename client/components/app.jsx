@@ -69,7 +69,9 @@ class App extends React.Component {
             <Route path="/">
               <div className="home">
                 <div className="profile">
-                  <img className="profpic" src="images/profile.jpg" alt="me" />
+                  <a href="/about">
+                    <img className="profpic" src="images/profile.jpg" alt="me" />
+                  </a>
                 </div>
                 {/* <div className="shortAbout">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
