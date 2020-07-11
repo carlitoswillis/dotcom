@@ -9,17 +9,24 @@ const About = () => (
           <img className="profpic" src="images/profile.jpg" alt="me" />
         </a>
       </div>
-      <p className="aboutText">
-        I’m a Full Stack Engineer with extensive experience with JavaScript and Node.js as well as a long history of solving a variety of business problems with JavaScript and Python
-
-        I've helped creatives and organizations (namely, musical creatives) with many business needs over the last few years while diving deeper into software engineering solutions– from writing scripts to learning how social networks use machine learning to enhance their advertising platforms.
-
-        When I’m not on the job, I love making music, writing quick one-off apps, and helping my friends and clients with their own creative endeavors– and integrating all the above!
-
-        If you’d like to talk about your company's software engineer needs, please reach out via email (
-        <a className="aboutText" href="mailto:cw@carlitoswillis.com">cw@carlitoswillis.com</a>
-        ).
-      </p>
+      <div className="aboutText">
+        <p>
+          I’m a Full Stack Engineer with extensive experience with JavaScript and Node.js as well as a long history of solving a variety of business problems with JavaScript and Python.
+        </p>
+        <p>
+          I've helped creatives and organizations (namely, musical creatives) with many business needs over the last few years while diving deeper into software engineering solutions– from writing scripts to learning how social networks use machine learning to enhance their advertising platforms.
+        </p>
+        <p>
+          When I’m not on the job, I love making music, writing quick one-off apps, and helping my friends and clients with their own creative endeavors– and integrating all the above!
+          {' '}
+        </p>
+        <p>
+          {' '}
+          If you’d like to talk about your company&apos;s software engineer needs, please reach out via email
+          <a className="aboutText" href="mailto:cw@carlitoswillis.com">(cw@carlitoswillis.com).</a>
+          {' '}
+        </p>
+      </div>
       <div className="skills">
         <Block info="JavaScript (ES5/ES6), React, Redux, jQuery, CSS (3) / CSS Modules, HTML (5), Styled-Components, Chart.js" color="red" title="Front End" />
         <Block
