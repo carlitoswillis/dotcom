@@ -427,3 +427,102 @@ a {
 
   background-color:rgb(133, 168, 187);
 }
+
+.aboutDiv {
+  margin: auto;
+}
+
+.aboutText {
+  color: black;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.toolkit {
+  font-family: 'Arial';
+  font-size: 12px;
+  font-weight: 500;
+  margin: 5px;
+  visibility: hidden;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  margin-bottom: 20px;
+  background: rgb(69, 165, 182);
+  border-radius: 10px;
+}
+
+.red, .blue, .yellow, .green {
+  display: grid;
+  width: 175px;
+  height: 175px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: .1;
+  cursor: pointer;
+  font-weight: 800;
+  text-align: center;
+  font-family: "Arial";
+  color: white;
+  font-size: 1.4em;
+  overflow-wrap: break-word;
+}
+
+.red:hover, .blue:hover, .yellow:hover, .green:hover{
+  opacity: 1;
+}
+.red {
+  background: red;
+}
+.blue {
+  background: blue;
+}
+.yellow {
+  background: yellow;
+  color: rgb(69, 165, 182);
+}
+.green {
+  background: green;
+}
+
+.skillsFill {
+  /* background: rgba(0, 0, 0, 0.269); */
+  margin: auto;
+}
+
+/* .skillTitle {
+  font-weight: 800;
+  text-align: center;
+  font-family: "Arial";
+  color: rgb(69, 165, 182);
+  font-size: 1em;
+  opacity: 1;
+} */
+.skillsFill:hover {
+  opacity: 1;
+}
+
+.skillInfoDiv {
+  margin: auto;
+}
+
+.skillInfo {
+  font-weight: 800;
+  text-align: center;
+  font-family: "Arial";
+  font-size: 13pt;
+  opacity: 1;
+  padding: 4px;
+}

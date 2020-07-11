@@ -25,7 +25,9 @@ class App extends React.Component {
             <div onClick={() => this.setState({ show: false })} className="fullScreenNav">
               <div className="fullNavMenu">
                 <h1 className="titleThree">
-                  carlitos willis | software engineer
+                  <a className="classy" href="/">
+                    carlitos willis | software engineer
+                  </a>
                 </h1>
                 <Nav classy="classy" />
               </div>
@@ -35,7 +37,9 @@ class App extends React.Component {
         <div className="homeDiv">
           <div className="introToo">
             <h1 className="titleTwo">
-              carlitos willis | software engineer
+              <a href="/">
+                carlitos willis | software engineer
+              </a>
             </h1>
           </div>
           <div className="intro">
@@ -55,7 +59,9 @@ class App extends React.Component {
             </div>
             <div className="menuSplit">
               <h1 className="title">
-                carlitos willis | software engineer
+                <a href="/">
+                  carlitos willis | software engineer
+                </a>
               </h1>
               <Nav />
             </div>
