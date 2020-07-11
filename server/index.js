@@ -1,4 +1,5 @@
 const express = require('express');
+const favicon = require('serve-favicon');
 const os = require('os');
 const compression = require('compression');
 const path = require('path');
@@ -10,6 +11,7 @@ const log = bunyan.createLogger({ name: 'production' });
 const port = process.env.PORT || 3000;
 
 app.use(compression());
+app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.ico')));
 app.use(express.json());
 app.use(express.static('public'));
 
@@ -38,6 +40,10 @@ app.listen(port, (err) => {
   if (err) {
     throw err;
   } else {
-    log.info(`Listening at http://${os.networkInterfaces().lo0[0].address}:${port}`);
+    try {
+      log.info(`Listening at http://${os.networkInterfaces().lo0[0].address}:${port}`);
+    } catch (e) {
+      log.info(`listening at ${port}`);
+    }
   }
 });
