@@ -30,9 +30,7 @@ const About = () => (
       <div className="skills">
         <Block info="JavaScript (ES5/ES6), React, Redux, jQuery, CSS (3) / CSS Modules, HTML (5), Styled-Components, Chart.js" color="red" title="Front End" />
         <Block
-          info="PostgreSQL, Node.js, Express, Nginx, MySQL, MongoDB, Mongoose, AWS (CLI, EC2, S3, RDS), Apache Cassandra, Python, Socket.IO
-
-"
+          info="PostgreSQL, Node.js, Express, Nginx, MySQL, MongoDB, Mongoose, AWS (CLI, EC2, S3, RDS), Apache Cassandra, Python, Socket.IO"
           color="blue"
           title="Back End"
         />
@@ -40,10 +38,10 @@ const About = () => (
           info="Git, Webpack, Babel, Grunt, Docker, Heroku, New Relic, npm, yarn, Trello, Asana, ESLint, CircleCI, Selenium, Jest, Enzyme, Mocha, Chai
 
 "
-          color="yellow"
+          color="blue"
           title="Tools"
         />
-        <Block info="Schema Design, Agile Practices, Test Driven Development, Continuous Deployment, Feature Branch Workflow" color="green" title="Etc." />
+        <Block info="Schema Design, Agile Practices, Test Driven Development, Continuous Deployment, Feature Branch Workflow" color="red" title="Other Skills" />
       </div>
       <p className="toolkit">
         Front-End: JavaScript (ES5/ES6), React, Redux, jQuery, CSS (3) / CSS Modules, HTML (5), Styled-Components, Chart.js

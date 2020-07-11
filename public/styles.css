@@ -413,7 +413,7 @@ a {
   border: 2px solid black;
   padding: 10px;
   line-height: 1.2;
-  box-shadow: 1px 1px 10px rgb(168, 166, 166);
+  /* box-shadow: 1px 1px 10px rgb(168, 166, 166); */
 }
 .aboutText p {
   margin: 10px;
@@ -440,18 +440,17 @@ a {
   margin: auto;
   margin-bottom: 20px;
   background: rgb(69, 165, 182);
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px rgb(168, 166, 166);
+  /* border-radius: 10px; */
+  /* box-shadow: 1px 1px 10px rgb(168, 166, 166); */
 }
 
 .red, .blue, .yellow, .green {
   display: grid;
   width: 175px;
   height: 175px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   margin-left: auto;
   margin-right: auto;
-  opacity: .1;
   cursor: pointer;
   font-weight: 800;
   text-align: center;
@@ -462,15 +461,15 @@ a {
 }
 
 .red:hover, .blue:hover, .yellow:hover, .green:hover{
-  opacity: 1;
   z-index: 3;
-  box-shadow: 1px 1px 10px rgb(69, 69, 69);
+  box-shadow: 1px 1px 10px rgb(255, 255, 255);
 }
 .red {
-  background: red;
+  background: coral;
 }
 .blue {
-  background: blue;
+  background: paleturquoise;
+  color: rgb(37, 40, 42);
 }
 .yellow {
   background: yellow;
@@ -512,9 +511,9 @@ a {
 
 @media screen and (max-width: 1100px) {
 
-  .red, .blue, .yellow, .green {
+  /* .red, .blue, .yellow, .green {
     opacity: 1;
-  }
+  } */
 
   .field {
     /* max-width: 300px; */
