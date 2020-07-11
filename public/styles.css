@@ -445,6 +445,7 @@ a {
   border: 2px solid black;
   padding: 10px;
   line-height: 1.2;
+  box-shadow: 1px 1px 10px rgb(168, 166, 166);
 }
 .aboutText p {
   margin: 10px;
@@ -452,6 +453,7 @@ a {
 
 .aboutText a {
   border: none;
+  box-shadow: none;
 }
 
 .toolkit {
@@ -471,6 +473,7 @@ a {
   margin-bottom: 20px;
   background: rgb(69, 165, 182);
   border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(168, 166, 166);
 }
 
 .red, .blue, .yellow, .green {
@@ -492,6 +495,7 @@ a {
 
 .red:hover, .blue:hover, .yellow:hover, .green:hover{
   opacity: 1;
+  box-shadow: 1px 1px 10px rgb(69, 69, 69);
 }
 .red {
   background: red;
