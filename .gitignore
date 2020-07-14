@@ -1,5 +1,13 @@
 bundle.js
 myConfig.js
+.well-known
+csr.pem
+key.pem
+mysql57-community-release-el7-11.noarch.rpm
+private.key
+public/.well-known/
+server.crt
+www_carlitoswillis_com.crt
 
 # Logs
 logs

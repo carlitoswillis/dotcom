@@ -4,32 +4,13 @@ const os = require('os');
 const compression = require('compression');
 const path = require('path');
 const bunyan = require('bunyan');
-const fs = require('fs');
-const http = require('http');
-const https = require('https');
 const db = require('../database');
 
-const privateKey = fs.readFileSync(path.join(__dirname, '..', 'private.key'), 'utf8');
-const certificate = fs.readFileSync(path.join(__dirname, '..', 'www_carlitoswillis_com.crt'), 'utf8');
-const credentials = { key: privateKey, cert: certificate };
-const log = bunyan.createLogger({ name: 'production' });
-
 const app = express();
-const httpApp = express();
-const httpServer = http.createServer(httpApp);
-const httpsServer = https.createServer(credentials, app);
+const log = bunyan.createLogger({ name: 'production' });
+const port = process.env.PORT || 3000;
 
-httpApp.get('*', (req, res) => {
-  res.redirect(`https://${req.headers.host}${req.url}`);
-});
-
-
-httpServer.listen(80);
-httpsServer.listen(443);
-
-httpServer.get('*', (req, res) => {
-  res.redirect(`https://${req.headers.host}${req.url}`);
-});
+console.log(path.join(__dirname, '..', 'csr.pem'));
 
 app.use(compression());
 app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.ico')));
@@ -55,4 +36,16 @@ app.route('/blogs')
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+});
+
+app.listen(port, (err) => {
+  if (err) {
+    throw err;
+  } else {
+    try {
+      log.info(`Listening at http://${os.networkInterfaces().lo0[0].address}:${port}`);
+    } catch (e) {
+      log.info(`listening at ${port}`);
+    }
+  }
 });
