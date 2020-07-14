@@ -1,6 +1,7 @@
 bundle.js
 myConfig.js
-
+.well-known
+csr.pem
 # Logs
 logs
 *.log

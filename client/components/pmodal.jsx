@@ -13,7 +13,7 @@ class PModal extends React.Component {
   render() {
     const { open } = this.state;
     const {
-      title, info, img, lnk1,
+      title, info, img, lnk1, lnk2
     } = this.props;
     return (
       <div>
@@ -25,7 +25,7 @@ class PModal extends React.Component {
                 <div className="modalInfoDiv">
                   <p className="modalInfo">{info}</p>
                   <div className="folioButtons">
-                    <a href={lnk1} target="_blank" rel="noreferrer">
+                    <a href={lnk2} target="_blank" rel="noreferrer">
                       <div className="folioButton">github</div>
                     </a>
                     <a href={lnk1} target="_blank" rel="noreferrer">
