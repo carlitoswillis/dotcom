@@ -22,11 +22,11 @@ const Nav = (props) => (
             Resume
           </li>
         </Link>
-        <Link to="/blog">
+        {/* <Link to="/blog">
           <li>
             Blog
           </li>
-        </Link>
+        </Link> */}
         <Link to="/portfolio">
           <li>
             Portfolio
