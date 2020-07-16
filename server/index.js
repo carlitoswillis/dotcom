@@ -23,13 +23,8 @@ httpApp.get('*', (req, res) => {
   res.redirect(`https://${req.headers.host}${req.url}`);
 });
 
-
 httpServer.listen(80);
 httpsServer.listen(443);
-
-httpServer.get('*', (req, res) => {
-  res.redirect(`https://${req.headers.host}${req.url}`);
-});
 
 app.use(compression());
 app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.ico')));
