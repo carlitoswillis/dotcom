@@ -47,6 +47,9 @@ app.route('/blogs')
   .delete((req, res) => {
     res.end('you are not authorized');
   });
+app.get('/carlitos-willis-resume', (req, res)=> {
+  res.sendFile(path.join(__dirname, '..', 'public', 'carlitos-willis-resume.pdf'));
+});
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));

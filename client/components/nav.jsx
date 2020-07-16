@@ -17,11 +17,11 @@ const Nav = (props) => (
             About
           </li>
         </Link>
-        <Link to="/resume">
+        <a href="/carlitos-willis-resume" target="_blank">
           <li>
             Resume
           </li>
-        </Link>
+        </a>
         {/* <Link to="/blog">
           <li>
             Blog
