@@ -20,7 +20,7 @@ class PModal extends React.Component {
         <div>
           {open
             ? (
-              <div className="field" onMouseEnter={() => this.setState({ open: !open })} onMouseLeave={() => this.setState({ open: !open })}>
+              <div className="field" onClick={() => this.setState({ open: !open })} onMouseLeave={() => this.setState({ open: false })}>
                 <img className="modalimg" src={`images/${img}`} alt="thing i do" />
                 <div className="modalInfoDiv">
                   <p className="modalInfo">{info}</p>
@@ -36,7 +36,7 @@ class PModal extends React.Component {
               </div>
             )
             : (
-              <div className="field" onMouseEnter={() => this.setState({ open: !open })} onMouseLeave={() => this.setState({ open: !open })}>
+              <div className="field" onClick={() => this.setState({ open: !open })} onMouseLeave={() => this.setState({ open: false })}>
                 <img className="modalimg" src={`images/${img}`} alt="thing i do" />
                 <h2 className="labelforfield">
                   {title}
