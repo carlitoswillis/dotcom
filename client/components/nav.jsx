@@ -7,11 +7,11 @@ const Nav = (props) => (
 
       {/* <h3>Menu</h3> */}
       <ul className={`nav-links ${`${props.classy || ''}`}`}>
-        <Link to="/">
+        {/* <Link to="/">
           <li>
             Home
           </li>
-        </Link>
+        </Link> */}
         <Link to="/about">
           <li>
             About
@@ -32,6 +32,11 @@ const Nav = (props) => (
             Portfolio
           </li>
         </Link>
+        <a href="/schedule" target="_blank">
+          <li>
+            Lets Meet
+          </li>
+        </a>
       </ul>
     </div>
   </nav>

@@ -23,6 +23,8 @@ httpApp.get('*', (req, res) => {
   res.redirect(`https://${req.headers.host}${req.url}`);
 });
 
+
+
 httpServer.listen(80);
 httpsServer.listen(443);
 
@@ -47,8 +49,12 @@ app.route('/blogs')
   .delete((req, res) => {
     res.end('you are not authorized');
   });
+
 app.get('/carlitos-willis-resume', (req, res)=> {
   res.sendFile(path.join(__dirname, '..', 'public', 'carlitos-willis-resume.pdf'));
+});
+app.get('/schedule', (req, res) => {
+  res.redirect('https://calendly.com/carlitoswillis/15min');
 });
 
 app.get('*', (req, res) => {
