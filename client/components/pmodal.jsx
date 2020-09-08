@@ -13,7 +13,7 @@ class PModal extends React.Component {
   render() {
     const { open } = this.state;
     const {
-      title, info, img, lnk1, lnk2
+      title, info, img, lnk1, lnk2,
     } = this.props;
     return (
       <div>
@@ -21,16 +21,20 @@ class PModal extends React.Component {
           {open
             ? (
               <div className="field" onClick={() => this.setState({ open: !open })} onMouseLeave={() => this.setState({ open: false })}>
-                <img className="modalimg" src={`images/${img}`} alt="thing i do" />
+                <img className="modalimg faded" src="images/blank.png" alt="thing i do" />
                 <div className="modalInfoDiv">
                   <p className="modalInfo">{info}</p>
                   <div className="folioButtons">
-                    <a href={lnk2} target="_blank" rel="noreferrer">
-                      <div className="folioButton">github</div>
+                    <a href={lnk1 || lnk2} target="_blank" rel="noreferrer">
+                      <div className="folioButton">{lnk1 ? 'check it out' : 'github'}</div>
                     </a>
-                    <a href={lnk1} target="_blank" rel="noreferrer">
-                      <div className="folioButton">live demo</div>
-                    </a>
+                    {lnk1 && lnk2
+                      ? (
+                        <a href={lnk2} target="_blank" rel="noreferrer">
+                          <div className="folioButton">github</div>
+                        </a>
+                      )
+                      : (<></>)}
                   </div>
                 </div>
               </div>
@@ -38,9 +42,13 @@ class PModal extends React.Component {
             : (
               <div className="field" onClick={() => this.setState({ open: !open })} onMouseLeave={() => this.setState({ open: false })}>
                 <img className="modalimg" src={`images/${img}`} alt="thing i do" />
-                <h2 className="labelforfield">
-                  {title}
-                </h2>
+                {title
+                  ? (
+                    <h2 className="labelforfield">
+                      {title}
+                    </h2>
+                  )
+                  : <></>}
               </div>
             )}
 
