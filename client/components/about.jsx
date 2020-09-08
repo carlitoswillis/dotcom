@@ -11,13 +11,13 @@ const About = () => (
       </div>
       <div className="aboutText">
         <p>
-          I’m a software engineer with extensive experience with JavaScript and Node.js as well as a long history of solving a variety of business problems with JavaScript and Python.
+          I’m a software engineer with an educational background in Cognitive Science– I learned to program while learning about the mind. I have extensive experience with JavaScript, React, and Node.js as well as a long history of solving a variety of business problems with software engineering skills.
         </p>
         <p>
           I've helped creatives and organizations (namely, musical creatives) with many business needs over the last few years while diving deeper into software engineering solutions– from writing scripts to learning how social networks use machine learning to enhance their advertising platforms.
         </p>
         <p>
-          When I’m not on the job, I love making music, writing quick one-off apps, scripts, or tools, and helping my friends and clients with their own creative endeavors– and integrating all the above!
+          When I’m not on the job, I love making music, writing quick one-off apps, scripts, or tools, and helping my friends and clients with their own creative endeavors– and integrating all the above! Also a big fan of Sci-Fi fantasy shows and I love listening to audiobooks!
           {' '}
         </p>
         <p>
