@@ -32,7 +32,7 @@ forever start server
 ### Start Webpack
 
 ```
-npm run react-dev
+npm run build
 ```
 
 ## Built With
