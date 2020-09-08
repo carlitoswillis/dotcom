@@ -1,6 +1,6 @@
 # dotcom
 The building blocks of my website!
-Created using React, Node.js, Express, and MySQL.
+Created using MySQL, Express, React, and Node.
 
 ## View
 
