@@ -1,5 +1,5 @@
 # dotcom
-This is my minimalistic website!
+The building blocks of my website!
 Created using React, Node.js, Express, and MySQL.
 
 ## View
